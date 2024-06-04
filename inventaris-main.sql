@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 15, 2024 at 09:42 AM
+-- Generation Time: Jun 04, 2024 at 06:22 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_inventaris`
+-- Database: `inventaris-main`
 --
 
 -- --------------------------------------------------------
@@ -53,6 +53,7 @@ INSERT INTO `tb_anggota` (`id_anggota`, `nama`, `dms`, `alamat`, `hp`, `foto`) V
 CREATE TABLE `tb_barang` (
   `id_barang` int NOT NULL,
   `nm_barang` varchar(100) NOT NULL,
+  `jenis` text NOT NULL,
   `list1` int DEFAULT NULL,
   `list2` int DEFAULT NULL,
   `list3` int DEFAULT NULL,
@@ -72,9 +73,10 @@ CREATE TABLE `tb_barang` (
 -- Dumping data for table `tb_barang`
 --
 
-INSERT INTO `tb_barang` (`id_barang`, `nm_barang`, `list1`, `list2`, `list3`, `baik1`, `buruk1`, `baik2`, `buruk2`, `baik3`, `buruk3`, `foto`, `tanggal1`, `tanggal2`, `tanggal3`) VALUES
-(72, 'Tera', 77, 12, 12, 10, 10, 1, 1, 4, 3, '65dfe10a31b2c.jpg', '', '', ''),
-(80, 'Sendok', 12, NULL, NULL, 6, 6, NULL, NULL, NULL, NULL, '65e0bee1ac822.png', '2024-02-29', '', '');
+INSERT INTO `tb_barang` (`id_barang`, `nm_barang`, `jenis`, `list1`, `list2`, `list3`, `baik1`, `buruk1`, `baik2`, `buruk2`, `baik3`, `buruk3`, `foto`, `tanggal1`, `tanggal2`, `tanggal3`) VALUES
+(72, 'Tera', 'asd', 77, 12, 12, 10, 10, 1, 1, 4, 3, '665f51295c580.png', '', '', ''),
+(80, 'Sendok', '', 12, NULL, NULL, 6, 6, NULL, NULL, NULL, NULL, '665f511ca82fd.png', '2024-02-29', '', ''),
+(81, 'KORA', 'baik', 12, NULL, NULL, 12, 12, NULL, NULL, NULL, NULL, '665f511598b89.png', '2024-06-04', '', '');
 
 -- --------------------------------------------------------
 
@@ -252,7 +254,7 @@ ALTER TABLE `tb_anggota`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id_barang` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `tb_dipinjam`
