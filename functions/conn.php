@@ -72,6 +72,16 @@ function deleteAsset($filename, $type) {
     }
 }
 
+function uploadFoto($location){
+    // file
+    $temp = explode(".", $_FILES["foto"]["name"]);
+    $newfilename = round(microtime(true)) . '.' . end($temp);
+    $location = $location . $newfilename;
+    move_uploaded_file($_FILES['foto']['tmp_name'], $location);
+    return $newfilename;
+
+}
+
 
 
 ?>

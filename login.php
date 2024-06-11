@@ -35,6 +35,8 @@
             </div>
 
             <button type="submit" class="btn btn-primary input" name="login">Submit</button>
+
+            <a href="regist.php" class="btn btn-primary">Registrasi</a>
         </form>
         
     </div>
